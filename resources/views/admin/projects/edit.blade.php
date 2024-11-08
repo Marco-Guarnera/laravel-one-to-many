@@ -29,6 +29,13 @@
                     {{-- @error('name')
                         <div class="alert alert-warning" role="alert">{{ $error }}</div>
                     @enderror --}}
+                    <!-- Project Type -->
+                    <label for="project-type" class="form-label">Type:</label>
+                    <select id="project-type" class="form-select" name="type_id">
+                        @foreach ($types_list as $item)
+                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                        @endforeach
+                    </select>
                     <!-- Project Description -->
                     <label for="project-description" class="form-label">Description:</label>
                     <textarea id="project-description" class="form-control" name="description" rows="5" placeholder="Description">{{ old('description', $project->description) }}</textarea>

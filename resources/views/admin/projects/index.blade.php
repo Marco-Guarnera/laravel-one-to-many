@@ -10,6 +10,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Type</th>
                     <th>Description</th>
                     <th>Functions</th>
                 </tr>
@@ -19,6 +20,7 @@
                     <tr class="align-middle">
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->name }}</td>
+                        <td>{{ $project->type->name }}</td>
                         <td>{{ substr($project->description, 0, 125) . '...' }}</td>
                         <td>
                             <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-success">Show</a>
