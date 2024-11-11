@@ -32,7 +32,7 @@
                     <label for="project-type" class="form-label">Type:</label>
                     <select id="project-type" class="form-select" name="type_id">
                         @foreach ($types_list as $item)
-                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            <option value="{{ $item->id }}" @if ($item->id == old('type_id')) selected @endif>{{ $item->name }}</option>
                         @endforeach
                     </select>
                     <!-- Project Description -->
